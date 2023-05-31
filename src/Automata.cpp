@@ -25,9 +25,9 @@ void Automata::coin(int money) {
 }
 
 void Automata::getMenu() {
-    if (state == WAIT) {       
+    if (state == WAIT) {
         for (int i = 0; i < 3; i++) {
-            std::cout<<i+1<<"."<<menu[i]<<"-"<<prices[i]<<" "<<std::endl;
+            std::cout << i+1 << "." << menu[i] << prices[i] << std::endl;
         }
     }
 }
@@ -63,7 +63,7 @@ void Automata::cancel() {
     }
 }
 
-void Automata::cook() {   
+void Automata::cook() {
     finish();
 }
 
