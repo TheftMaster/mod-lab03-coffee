@@ -25,8 +25,7 @@ void Automata::coin(int money) {
 }
 
 void Automata::getMenu() {
-    if (state == WAIT) {
-        
+    if (state == WAIT) {       
         for (int i = 0; i < 3; i++) {
             std::cout<<i+1<<"."<<menu[i]<<"-"<<prices[i]<<" "<<std::endl;
         }
@@ -42,7 +41,6 @@ void Automata::choice(int option) {
         if (option >= 1 && option <= 3) {
             if (check()) {
                 state = COOK;
-
                 cook();
             }
         }
@@ -65,13 +63,11 @@ void Automata::cancel() {
     }
 }
 
-void Automata::cook() {
-    
+void Automata::cook() {   
     finish();
 }
 
 void Automata::finish() {
     cash = 0;
     state = WAIT;
-    
 }

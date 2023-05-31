@@ -16,7 +16,7 @@ enum STATES {
 };
 
 class Automata {
-public:
+  public:
     Automata();
     void on();
     void off();
@@ -28,8 +28,7 @@ public:
     void cancel();
     void cook();
     void finish();
-
-private:
+  private:
     int cash;
     std::string menu[3];
     int prices[3];
