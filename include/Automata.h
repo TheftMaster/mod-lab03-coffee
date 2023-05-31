@@ -17,22 +17,22 @@ enum STATES {
 
 class Automata {
  private:
-   int cash;
-   std::string menu[3];
-   int prices[3];
-   STATES state;
+    int cash;
+    std::string menu[3];
+    int prices[3];
+    STATES state;
  public:
-   Automata();
-   void on();
-   void off();
-   void coin(int money);
-   void getMenu();
-   STATES getState();
-   void choice(int option);
-   bool check();
-   void cancel();
-   void cook();
-   void finish();
+    Automata();
+    void on();
+    void off();
+    void coin(int money);
+    void getMenu();
+    STATES getState();
+    void choice(int option);
+    bool check();
+    void cancel();
+    void cook();
+    void finish();
 };
 
 #endif // INCLUDE_AUTOMATAH
