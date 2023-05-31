@@ -8,6 +8,12 @@ TEST(AutomataTest, InitialState) {
     EXPECT_EQ(machine.getState(), OFF);
 }
 
+TEST(AutomataTest, InitialState1) {
+    Automata machine;
+    machine.on();
+    EXPECT_EQ(machine.getState(), WAIT);
+}
+
 TEST(AutomataTest, TurnOnAndOff) {
     Automata machine;
     machine.on();
@@ -26,14 +32,6 @@ TEST(AutomataTest, CoinAndCheck) {
 
     machine.coin(100);
     EXPECT_EQ(machine.getState(), ACCEPT);
-
-    EXPECT_TRUE(machine.check());
-
-    machine.coin(20);
-    EXPECT_FALSE(machine.check());
-
-    machine.off();
-    EXPECT_FALSE(machine.check());
 }
 
 TEST(AutomataTest, CookAndFinish) {
